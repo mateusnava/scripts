@@ -148,11 +148,6 @@ function firewall {
   pause "Firewall está configurado, somente as portas $ports estão liberadas para serem acessadas externamente, o resto está bloqueado."
 }
 
-function clean {
-  pause "Sempre que eu trabalho, eu costumo sujar algumas coisas, por isso vou fazer uma boa limpeza"
-  apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-}
-
 function reboot {
   pause "Agora, vodê pode reiniciar seu servidor e tudo estará funcionando (Espero que assim seja). Vou sentir saudades..."
 }
@@ -184,7 +179,5 @@ configure_new_relic
 enable_automatic_security_upgrade
 
 firewall
-
-clean
 
 reboot
